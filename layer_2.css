@@ -1,0 +1,55 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+    background-image:url('img/lay-2-bg.jpg');
+
+}
+.flex-container{
+    display:flex;
+    flex-direction:row;
+    padding: 10px; 
+    z-index: 0; 
+}
+.discrpt{
+height:700px;
+width:50%;
+position:relative;
+float:right;
+background-color: aliceblue;
+padding:10px 20px 0 20px;
+z-index: 1;
+}
+/*.indi-container{
+   display:flex;
+   flex-direction:row;
+   flex-wrap:wrap;
+   justify-content: flex-start;
+   align-content:space-around;
+   align-items:space-around;
+  left:30%;
+  padding:10px;
+   
+
+}*/
+.indi-container{
+    display:grid;
+    grid-template-rows:auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    gap:20px 20px;
+    padding: 10px;   
+    position:relative;/* to postion the grid container it must then and then only the 'left:500px' works*/   
+    float:right;
+    clear:right;
+    bottom:400px;
+    z-index: 3;
+}
+@media  (max-width:600px){
+    .indi-container{
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        gap:20px;
+        z-index: 3;
+    }
+}
